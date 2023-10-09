@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
 import com.example.firstapp.databinding.ActivityMainBinding
+import com.example.firstapp.utils.MyPreferences
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     private lateinit var binding : ActivityMainBinding

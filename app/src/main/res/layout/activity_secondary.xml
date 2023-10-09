@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:id="@+id/buttons"
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
         android:orientation="horizontal"
@@ -13,23 +13,26 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/blue">
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="20dp">
 
-        <ImageButton
+        <RadioButton
+            android:id="@+id/radio_0"
+            android:background="@drawable/dog_selector"
+            android:button="@null"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/dog_13_svgrepo_com"
-            android:scaleType="fitCenter"
-            />
+            android:checked="true"
+            android:layout_weight="1" />
 
-        <ImageButton
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:background="@drawable/cat_selector"
+            android:button="@null"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/cat_svgrepo_com"
-            android:scaleType="fitCenter"/>
-    </LinearLayout>
+            android:layout_weight="1"/>
+    </RadioGroup>
 
     <TextView
         android:id="@+id/hello_message"
@@ -37,20 +40,39 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttons"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        app:layout_constraintBottom_toTopOf="@id/do_you_know"
         android:text="Olá, username"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:textSize="30sp" />
 
     <TextView
+        android:id="@+id/do_you_know"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hello_message"
+        app:layout_constraintBottom_toTopOf="@id/curiosity"
+        android:text="Você sabia?"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/curiosity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/do_you_know"
         app:layout_constraintBottom_toTopOf="@id/generateButton"
         android:text="curiosity_here"
+        android:textStyle="italic"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
         android:gravity="center_horizontal"
         android:textSize="20sp" />
 
@@ -66,5 +88,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:textSize="20sp"
+        android:textColor="@color/white"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

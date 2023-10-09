@@ -25,5 +25,4 @@
             android:name=".SecondActivity"
             android:exported="false" />
     </application>
-
 </manifest>
