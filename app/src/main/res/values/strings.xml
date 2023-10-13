@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">firstApp</string>
+    <string name="app_name">CURIOSIDADES DE GATOS E CACHORROS</string>
+    <string name="type_your_name">Digite seu nome</string>
+    <string name="keep">CONTINUAR</string>
+    <string name="validation_message">Type your name to continue.</string>
+    <string name="hello">Hello</string>
+    <string name="do_you_know">Você sabia?</string>
+    <string name="generate_curiosity">GERAR NOVA CURIOSIDADE</string>
+    <string name="default_curiosity">Algum erro ocorreu ao obter uma curiosidade. Tente novamente mais tarde.</string>
 </resources>

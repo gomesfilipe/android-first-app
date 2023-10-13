@@ -1,4 +1,4 @@
-package com.example.firstapp
+package com.example.firstapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
+import com.example.firstapp.R
 import com.example.firstapp.databinding.ActivityMainBinding
 import com.example.firstapp.utils.MyPreferences
 
@@ -26,18 +27,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     }
 
     override fun onClick(v: View) {
-        when(v.id) {
-            binding.button.id -> this.onClickButton()
-            else -> {
-                val text: String = "Evento de click não tratado."
-                Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
-            }
+        if(v.id == binding.button.id) {
+            this.onClickButton()
         }
     }
 
     private fun onClickButton() {
         if(sp.getString("input").isEmpty()) {
-            val text: String = "Digite seu nome para continuar."
+            val text: String = resources.getString(R.string.validation_message)
             Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
         } else {
             startActivity(Intent(this, SecondActivity::class.java))

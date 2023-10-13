@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CATS AND DOGS CURIOSITIES</string>
+    <string name="type_your_name">Type your name</string>
+    <string name="keep">CONTINUE</string>
+    <string name="validation_message">Type your name to continue.</string>
+    <string name="hello">Hello</string>
+    <string name="do_you_know">Do you know?</string>
+    <string name="generate_curiosity">GENERATE A NEW CURIOSITY</string>
+    <string name="default_curiosity">An error has occurred while getting a curiosity. Try again later.</string>
+</resources>

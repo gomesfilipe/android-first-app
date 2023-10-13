@@ -25,7 +25,7 @@ class Curiosities private constructor(){
             "Os cães são mencionados 14 vezes na Bíblia.",
             "O nariz de cada cachorro é único, assim como nossa impressão digital.",
             "A temperatura canina gira em torno de 38°C.",
-            "As únicas glândulas sudoríparas que os cachorros têm estão entre seus dedos das patas;",
+            "As únicas glândulas sudoríparas que os cachorros têm estão entre seus dedos das patas",
         )
 
         fun getRandomCatCuriosity(): String {
